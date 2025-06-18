@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce JavaScript</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="icon" type="image/x-icon" href="/path/to/favicon.ico">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <!--  Header Section    -->
+  <header class="section-navbar">
+    <section class="top_txt">
+      <div class="head container">
+        <div class="nav_head_txt">
+          <div><p>Free shipping, 30-day return or refund guarantee.</p></div>
+
+          <div class="sign-in-up">
+            <a href="#">SIGN IN</a>
+            <a href="#">SIGN UP</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container down-txt">
+      
+      <div class="navbar-brand">
+        <a href="index.html">
+          <img class="logo" src="https://logos.textgiraffe.com/logos/logo-name/Akshita-designstyle-boots-m.png" width="30%" height="auto" alt="">
+        </a>
+      </div>
+
+      <nav class="navbar">
+        <ul>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="about.html" class="nav-link"> About</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="product.html" class="nav-link"> Product</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="addToCart.html" target="_blank" class="nav-link cart-button" id="cartValue"> 
+              <i class="fa-solid fa-cart-shopping">0</i>
+            </a>
+          </li>
+          
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+
+  <section class="section-extra-product">
+    <div class="container grid grid-three--cols sec-extra">
+
+      <div class="div-extra grid grid-two--cols">
+        <div class="extra-text">
+          <p>new year sale</p>
+          <h3>get and extra 50% off</h3>
+          <a href="#">Show now</a>
+        </div>
+
+        <div class="extra-img extra-laptop">
+          <img src="https://github.com/thapatechnical/jsecom_youtube/blob/master/public/images/laptop.png?raw=true" alt="laptop">
+        </div>
+      </div>
+
+      <div class="div-extra grid grid-two--cols">
+        <div class="extra-text">
+          <p>new year sale</p>
+          <h3>40% discount on headphone</h3>
+          <a href="#">Show now</a>
+        </div>
+
+        <div class="extra-img">
+          <img src="https://github.com/thapatechnical/jsecom_youtube/blob/master/public/images/headphoneEcom.png?raw=true" alt="Headphone">
+        </div>
+      </div>
+
+      <div class="div-extra grid grid-two--cols">
+        <div class="extra-text">
+          <p>new year sale</p>
+          <h3>get and extra 50% off</h3>
+          <a href="#">Show now</a>
+        </div>
+
+        <div class="extra-img ">
+          <img src="https://github.com/thapatechnical/jsecom_youtube/blob/master/public/images/mobiles.png?raw=true" alt="Mobile">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End extra product section  -->
+
+  <!--  Policy Section  -->
+
+  <section class="section-policy">
+    <div class="container grid grid-four--cols">
+
+      <div class="div-policy">
+        <div class="icon">
+          <i class="fa-solid fa-truck-fast"></i>
+        </div>
+        <h3>Free Shipping</h3>
+        <p>Enjoy free shipping on all orders over $100.</p>
+      </div>
+
+      <div class="div-policy">
+        <div class="icon">
+          <i class="fa-solid fa-arrows-rotate"></i>
+        </div>
+        <h3>Easy Returns</h3>
+        <p>30-day return policy for hassle-free shopping.</p>
+      </div>
+
+      <div class="div-policy">
+        <div class="icon">
+          <i class="fa-solid fa-headset"></i>
+        </div>
+        <h3>24/7 Support</h3>
+        <p>Our support team is here to help you anytime.</p>
+      </div>
+
+      <div class="div-policy">
+        <div class="icon">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h3>Secure Payment</h3>
+        <p>Your payment information is safe with us.</p>
+      </div>
+    </div>
+  </section>
+
+    <section class="section-products container">
+      <div>
+        <div class="product-heading">Checkout Out Store...</div>       
+      </div>
+
+      <section class="container">
+        <div id="productContainer"></div>
+      </section>
+
+    </section>
+
+    <!--  Start product session -->
+    <!--  Writing in <template> nothing is rendered in the web page. of HTML -->
+    <template id="productTemplate">
+      <div class="cards" id="cardValue">
+
+        <article class="information card">  <!--[card]-->
+
+          <span class="category"></span>
+
+          <div class="imageContainer">
+            <img class="productImage" src="" alt=""/>
+          </div>
+
+          <h2 class="productName"></h2>
+
+          <div class="productRating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+
+          <p class="productDescription"></p>
+
+          <div class="productPriceElement">
+            <p class="productPrice"></p>
+            <p class="productActualPrice"></p>
+          </div>
+
+          <div class="productStockElements">
+            <p class="productProperty">Total Stocks Available : </p>
+            <p class="productStock"></p>
+          </div>
+
+          <div class="productQuantityElement">
+            <p class="productProperty">Quantity(Pieces)</p>
+            
+            <div class="stockElement">
+              <button class="cartIncrement">+</button>
+              <p class="productQuantity">1</p>
+              <button class="cartDecrement">-</button>
+            </div>
+          </div>
+
+          <div class="add-to-cart-button">
+            <i class="fa-solid fa-cart-shopping"></i> Add To Cart
+          </div>
+
+        </article>
+      </div>
+
+    </template>
+
+   <footer class="section-footer">
+    <script src="footer.js"></script>
+  </footer>
+
+  <script type="module" src="main.js"></script>
+
+</body>
